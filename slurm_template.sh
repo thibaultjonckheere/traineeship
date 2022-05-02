@@ -1,6 +1,6 @@
 #!/bin/bash -l
  
-#SBATCH -A p2012999             # project ID
+#SBATCH -A snic2022-22-434      # project ID = SNIC 2022/22-434
 #SBATCH -p core                 # core or node
 #SBATCH -n 1                    # number of cores   
 #SBATCH -t 12:00:00             # max running time
