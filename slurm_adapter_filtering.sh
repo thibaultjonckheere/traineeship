@@ -3,7 +3,7 @@
 #SBATCH -A snic2022-22-434                  # project ID = snic2022-22-434
 #SBATCH -p core                             # core or node
 #SBATCH -n 1                                # number of cores   
-#SBATCH -t 12:00:00                         # max running time
+#SBATCH -t 1:00:00                         # max running time
 #SBATCH -J test_adapter_filtering           # job name
 #SBATCH -o out/test_adapter_filtering%A.out # standard output
 #SBATCH -e err/test_adapter_filtering%A.err # standard error
