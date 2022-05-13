@@ -24,6 +24,9 @@ echo [`date`] Transferring data
 cp data/* $SNIC_TMP
 cd $SNIC_TMP
 
+#unzipping the fastq files
+gunzip *fastq.gz
+
 #Run job code
 # $ transrate --assembly transcripts.fa \
 #             --left left.fq \
