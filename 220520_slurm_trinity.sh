@@ -25,8 +25,8 @@ cp data/138_L003* $SNIC_TMP
 cd $SNIC_TMP
 
 #Run job code
-# Trinity --seqType fq --max_memory 50G --left reads_1.fq  --right reads_2.fq --CPU 6
-Trinity --seqType fq --max_memory 50G \
+# Trinity --seqType fq --max_memory 100G --left reads_1.fq  --right reads_2.fq --CPU 16
+Trinity --seqType fq --JM 50G \
 --left 138_L003_R1_trimmed_paired.fastq.gz --right 138_L003_R2_trimmed_paired.fastq.gz \
 --CPU 16
 
