@@ -11,7 +11,7 @@
 #SBATCH --mail-user=thibault.jonckheere@student.howest.be
 
 #load modules
-module load java/sun_jdk1.7.0_25 bioinfo-tools trinity/2014-07-17
+module load java/sun_jdk1.7.0_25 bioinfo-tools bowtie/1.2.3 samtools/1.14 trinity/2014-07-17
 
 #Create job directory
 echo [`date`] Creating job directory
@@ -32,4 +32,4 @@ Trinity --seqType fq --JM 50G \
 
 #Transfer results back to job directory
 echo [`date`] Receiving result file
-cp trinity_out_dir/ $jobDir
+cp -r trinity_out_dir/ $jobDir
