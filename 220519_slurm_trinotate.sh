@@ -1,3 +1,5 @@
+#!/bin/bash -l
+
 #SBATCH -A snic2022-22-434                  # project ID = snic2022-22-434
 #SBATCH -p node                             # core or node
 #SBATCH -n 1                                # number of cores   
