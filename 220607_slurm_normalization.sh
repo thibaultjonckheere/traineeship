@@ -21,13 +21,13 @@ jobDir=$projDir/jobs/119_L003_normalization_$SLURM_JOB_ID/
 
 #Transfer data to compute node disk
 echo [`date`] Transferring data
-cp data/119_L003* $SNIC_TMP
+cp data/* $SNIC_TMP
 cd $SNIC_TMP
 
 #Run job code
 # Trinity --seqType fq --max_memory 100G --left reads_1.fq  --right reads_2.fq --CPU 16
 $TRINITY_HOME/util/insilico_read_normalization.pl --seqType fq --JM 100G --max_cov 30\
---left 119_L003_R1_trimmed_paired.fastq.gz --right 119_L003_R2_trimmed_paired.fastq.gz \
+--left 119_L001_R1_trimmed_paired.fastq.gz --right 119_L001_R2_trimmed_paired.fastq.gz \
 --pairs_together --PARALLEL_STATS --CPU 16
 
 #Transfer results back to job directory
